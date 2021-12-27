@@ -6,10 +6,10 @@
 }
 
 body{
-padding: 0px;
-top: 0;
-left: 0;
-margin: 0;
+    padding: 0px;
+    top: 0;
+    left: 0;
+    margin: 0;
 }
 
 .corpo{
@@ -21,7 +21,6 @@ margin: 0;
     padding-bottom: 25px;
     border-radius: 10px;
 
-    cursor: url(../images/download.png) 4 12, auto;
 }
 
 .visor{
@@ -52,7 +51,7 @@ margin: 0;
     align-items: center;
     justify-content: center;
 
-    cursor: url(../images/download.png) 4 12, auto;
+    
 
     transition: 0.3s;
 }
