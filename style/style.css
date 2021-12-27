@@ -1,0 +1,67 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root{
+    --calculdora: 'Roboto', sans-serif;
+}
+
+body{
+padding: 0px;
+top: 0;
+left: 0;
+margin: 0;
+}
+
+.corpo{
+    height: 600px;
+    width: 400px;
+    background-color: #ff000042;
+    margin: 50px auto 10px auto;
+    padding-top: 10px;
+    padding-bottom: 25px;
+    border-radius: 10px;
+
+    cursor: url(../images/download.png) 4 12, auto;
+}
+
+.visor{
+    margin: 0px auto 6px auto;
+    padding-top: 100px;
+    height: 30px;
+    width: 380px;
+    background-color: rgba(0, 0, 255, 0.596);
+    border-radius: 10px 10px 0px 0px;
+}
+
+.tecla{
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.teclas{
+    font-family: var(--calculdora);
+    color: white;
+    font-size: 1.5em;
+
+    display: inline-flex;
+    margin: 3px 1px;
+    background-color: green;
+    height: 90px;
+    width: 90px;
+    align-items: center;
+    justify-content: center;
+
+    cursor: url(../images/download.png) 4 12, auto;
+
+    transition: 0.3s;
+}
+
+.teclas:hover{
+    background-color: hotpink;
+    filter: drop-shadow(2px 7px 10px rgba(0, 0, 0, 0.658));
+}
+
+.esquerda{
+    margin-left: 11px;
+}
