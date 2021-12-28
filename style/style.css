@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 :root{
+    /*Fontes*/
     --calculdora: 'Roboto', sans-serif;
 }
 
@@ -20,7 +21,6 @@ body{
     padding-top: 10px;
     padding-bottom: 25px;
     border-radius: 10px;
-
 }
 
 .visor{
@@ -50,15 +50,17 @@ body{
     width: 90px;
     align-items: center;
     justify-content: center;
+    border-width: 0px;
 
+    cursor: pointer;
     
-
-    transition: 0.3s;
+    transition: 0.45s;
 }
 
 .teclas:hover{
     background-color: hotpink;
     filter: drop-shadow(2px 7px 10px rgba(0, 0, 0, 0.658));
+    filter: drop-shadow(-2px 0px 10px rgba(0, 0, 0, 0.658));
 }
 
 .esquerda{
