@@ -8,32 +8,32 @@
     <title>Calculadora</title>
 </head>
 <body>
-    <div class="corpo" onclick="valor()">
+    <div class="corpo">
         <div class="visor"></div>
         <div class="tecla">
             <button class="teclas esquerda" value="√">√</button>
             <button class="teclas" value="x²">x²</button>
-            <button class="teclas" value="x²">C</button>
+            <button class="teclas" value="x²" onclick="limpar()">C</button>
             <button class="teclas" value="÷">÷</button>        
 
 
-            <button class="teclas esquerda" value="9">9</button>
-            <button class="teclas" value="8">8</button>
-            <button class="teclas" value="7">7</button>
-            <button class="teclas" value="x">x</button>
+            <button class="teclas esquerda" onclick="adicionar(9)">9</button>
+            <button class="teclas" onclick="adicionar(8)">8</button>
+            <button class="teclas" onclick="adicionar(7)">7</button>
+            <button class="teclas">x</button>
 
-            <button class="teclas esquerda" value="4">4</button>
-            <button class="teclas" value="5">5</button>
-            <button class="teclas" value="6">6</button>
-            <button class="teclas" value="+">+</button>
+            <button class="teclas esquerda" onclick="adicionar(4)">4</button>
+            <button class="teclas" onclick="adicionar(5)">5</button>
+            <button class="teclas" onclick="adicionar(6)">6</button>
+            <button class="teclas">+</button>
 
-            <button class="teclas esquerda" value="1">1</button>
-            <button class="teclas" value="2">2</button>
-            <button class="teclas" value="3">3</button>
-            <button class="teclas" value="-">-</button>
+            <button class="teclas esquerda" onclick="adicionar(1)">1</button>
+            <button class="teclas" onclick="adicionar(2)">2</button>
+            <button class="teclas"  onclick="adicionar(3)">3</button>
+            <button class="teclas">-</button>
 
             <button class="teclas esquerda" style="border-radius: 0px 0px 0px 10px">,</button>
-            <button class="teclas">0</button>
+            <button class="teclas" onclick="adicionar(0)">0</button>
             <button class="teclas">←</button>
             <button class="teclas" style="border-radius: 0px 0px 10px 0px">=</button>
     </div>
