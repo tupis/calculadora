@@ -8,11 +8,9 @@ elem_2.push(2)
 const termo1 = String(elem_1).split(",").join(" ").replace(/ /g ,"")
 const termo2 = String(elem_2).split(",").join(" ").replace(/ /g ,"")
 
+document.querySelector("#soma").addEventListener("click", sum(Number(termo1), Number(termo2))) // Corrigir erro do função
 
-const soma = document.querySelector("#soma").addEventListener("onclick", sum(Number(termo1),Number(termo2)))
-
-// console.log(termo2)
-// console.log(sum(Number(termo1),Number(termo2)))
+console.log(sum(Number(termo1),Number(termo2)))
 
 function adicionar(value){
     const visor = document.querySelector(".visor")
@@ -53,10 +51,13 @@ function adicionar(value){
 }
 
 function sum(a,b){
-    return a + b;
+    const visor = document.querySelector(".visor")
+    document.body.style.backgroundColor = "red"
+
+    visor.innerHTML = `${a}, ${b}`
 }
 
-function sub(a,b){
+function subs(a,b){
     return a - b;
 }
 
@@ -81,3 +82,4 @@ function limpar(){
     visor.innerHTML = ""
     elem_1 = []
 }
+
