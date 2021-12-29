@@ -1,3 +1,5 @@
+// fazer interação do teclado com calculadora
+
 var elem_1 = []
 var elem_2 = []
 var elemento = 1
@@ -51,10 +53,7 @@ function adicionar(value){
 }
 
 function sum(a,b){
-    const visor = document.querySelector(".visor")
-    document.body.style.backgroundColor = "red"
 
-    visor.innerHTML = `${a}, ${b}`
 }
 
 function subs(a,b){
