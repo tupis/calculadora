@@ -3,16 +3,14 @@
 var elem_1 = []
 var elem_2 = []
 var elemento = 1
+var resultado;
 
-elem_1.push(1)
+elem_1.push(9)
 elem_2.push(2)
 
 const termo1 = String(elem_1).split(",").join(" ").replace(/ /g ,"")
 const termo2 = String(elem_2).split(",").join(" ").replace(/ /g ,"")
 
-document.querySelector("#soma").addEventListener("click", sum(Number(termo1), Number(termo2))) // Corrigir erro do função
-
-console.log(sum(Number(termo1),Number(termo2)))
 
 function adicionar(value){
     const visor = document.querySelector(".visor")
@@ -52,33 +50,46 @@ function adicionar(value){
     visor.innerHTML = `${elemento1}`
 }
 
-function sum(a,b){
-
+function sum(a = Number(termo1), b = Number(termo2)){
+    resultado = a + b;
 }
 
-function subs(a,b){
-    return a - b;
+function subs(a = Number(termo1), b = Number(termo2)){
+    resultado = a - b;
 }
 
-function multiply(a,b){
-    return a * b;
+function multiply(a = Number(termo1), b = Number(termo2)){
+    resultado = a * b;
 }
 
-function divider(a,b){
-    return a / b;
+function divider(a = Number(termo1), b = Number(termo2)){
+    resultado = a / b;
 }
 
-function sqrt(a){
-    return Math.sqrt(a);
+function sqrt(a = Number(termo1)){
+    resultado = Math.sqrt(a);
 }
 
-function pow(a , b = 2){
-    return Math.pow(a,b)
+function pow(a = Number(termo1) , b = 2){
+    resultado = Math.pow(a,b)
+    console.log(resultado)
 }
 
-function limpar(){
+function clean(){
     const visor = document.querySelector(".visor")
     visor.innerHTML = ""
     elem_1 = []
+    elem_2 = []
 }
 
+function back(){
+    const visor = document.querySelector(".visor")
+    elem_1.pop()
+    const elemento1 = String(elem_1).split(",").join(" ").replace(/ /g ,"")
+    visor.innerHTML = `${elemento1}`
+    
+}
+
+function result(){
+
+}

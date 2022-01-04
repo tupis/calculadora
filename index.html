@@ -11,31 +11,31 @@
     <div class="corpo">
         <div class="visor"></div>
         <div class="tecla">
-            <button class="teclas esquerda" value="√">√</button>
-            <button class="teclas">x²</button>
-            <button class="teclas" onclick="limpar()">C</button>
-            <button class="teclas">÷</button>        
+            <button class="teclas esquerda" onclick="sqrt()">√</button>
+            <button class="teclas" onclick="pow()">x²</button>
+            <button class="teclas" onclick="clean()">C</button>
+            <button class="teclas" onclick="divider()">÷</button>        
 
 
             <button class="teclas esquerda" onclick="adicionar(9)">9</button>
             <button class="teclas" onclick="adicionar(8)">8</button>
             <button class="teclas" onclick="adicionar(7)">7</button>
-            <button class="teclas">x</button>
+            <button class="teclas" onclick="multiply()">x</button>
 
             <button class="teclas esquerda" onclick="adicionar(4)">4</button>
             <button class="teclas" onclick="adicionar(5)">5</button>
             <button class="teclas" onclick="adicionar(6)">6</button>
-            <button class="teclas" id="soma">+</button>
+            <button class="teclas" onclick="sum()">+</button>
 
             <button class="teclas esquerda" onclick="adicionar(1)">1</button>
             <button class="teclas" onclick="adicionar(2)">2</button>
-            <button class="teclas"  onclick="adicionar(3)">3</button>
-            <button class="teclas">-</button>
+            <button class="teclas" onclick="adicionar(3)">3</button>
+            <button class="teclas" onclick="subs()">-</button>
 
             <button class="teclas esquerda" style="border-radius: 0px 0px 0px 10px">,</button>
             <button class="teclas" onclick="adicionar(0)">0</button>
-            <button class="teclas">←</button>
-            <button class="teclas" style="border-radius: 0px 0px 10px 0px">=</button>
+            <button class="teclas" onclick="back()">←</button>
+            <button class="teclas" onclick="result()" style="border-radius: 0px 0px 10px 0px">=</button>
     </div>
     </div>
     <script src="scripts/script.js"></script>
