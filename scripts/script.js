@@ -2,7 +2,6 @@
 const visor = document.querySelector(".visor")
 var elem_1 = []
 var elem_2 = []
-var elemento = 1
 var resultado
 var termo = elem_1
 
@@ -48,8 +47,6 @@ function adicionar(value){
     }
     const elemento = String(termo).split(",").join(" ").replace(/ /g ,"")
     visor.innerHTML = `${elemento}`
-    console.log(elem_1)
-    console.log(elem_2)
 }
 
 function operation(op){ 
@@ -83,15 +80,13 @@ function clean(){
 }
     
 function back(){
-    const visor = document.querySelector(".visor")
     termo.pop()
-    const elemento1 = String(termo).split(",").join(" ").replace(/ /g ,"")
-    visor.innerHTML = `${elemento1}`
+    const elemento = String(termo).split(",").join(" ").replace(/ /g ,"")
+    visor.innerHTML = `${elemento}`
     
 }
 
 function result(){
-    const visor = document.querySelector(".visor")
     function sum(a = Number(termo1), b = Number(termo2)){
         resultado = a + b;
     }
