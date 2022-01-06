@@ -1,4 +1,5 @@
 // fazer interação do teclado com calculadora
+
 var elem_1 = []
 var elem_2 = []
 var termo = elem_1
@@ -6,10 +7,12 @@ var resultado
 var operador
 const termo1 = String(elem_1).split(",").join(" ").replace(/ /g ,"")
 const termo2 = String(elem_2).split(",").join(" ").replace(/ /g ,"")
-const visor = document.querySelector(".visor")
+const visor = document.querySelector(".visor-text")
+const antecessor = document.querySelector(".antecessor")
 
 
 function adicionar(value) {
+    antecessor.style.transform = "translateY(-130px)"
     switch (value) {
         case 0:
             termo.push(0)
@@ -47,47 +50,56 @@ function adicionar(value) {
 }
 
 function operation(op) { 
+    const elemento = String(termo).split(",").join(" ").replace(/ /g ,"")
     switch (op) {
         case 0:            //sum
             termo = elem_2
             operador = "sum"
+            antecessor.innerHTML = `${elemento}`
             break;
         case 1:            //subs
             termo = elem_2
             operador = "subs"
+            antecessor.innerHTML = `${elemento}`
             break;
         case 2:            //mult
             termo = elem_2
             operador = "mult"
+            antecessor.innerHTML = `${elemento}`
             break;
         case 3:            //divider
             termo = elem_2
             operador = "divider"
+            antecessor.innerHTML = `${elemento}`
             break;
         case 4:            //pow
             termo = elem_2
             operador = "pow"
+            antecessor.innerHTML = `${elemento}`
             break;
         case 5:            //sqrt
             termo = elem_2
             operador = "sqrt"
+            antecessor.innerHTML = `${elemento}`
         break;
     }
+    console.log(operador)
 }
 
 function result() {
     switch (operador) {
         case "sum":
-            (a = Number(termo1), b = Number(termo2)) => {resultado = a + b}
+            (a = Number(termo1), b = Number(termo2)) => {return resultado = a + b}
+            console.log(resultado)
             break;
         case "subs":
             (a = Number(termo1), b = Number(termo2)) => {
                 resultado = a - b;
             }
-            break;
-        
+        break;
     }
-    
+
+
     /* function multiply(a = Number(termo1), b = Number(termo2)) {
         resultado = a * b;
     }
@@ -108,6 +120,7 @@ function result() {
 }
 
 function clean() {
+    antecessor.innerHTML = ""
     visor.innerHTML = ""
     elem_1.length = 0
     elem_2.length = 0
@@ -118,7 +131,8 @@ function back() {
     termo.pop()
     const elemento = String(termo).split(",").join(" ").replace(/ /g ,"")
     visor.innerHTML = `${elemento}`
+    if (termo.length == 0) {
+        antecessor.style.transform = "translateY(-92px)"
+    }
     
 }
-
-console.log("ssalve")

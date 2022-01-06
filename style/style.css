@@ -31,10 +31,20 @@ body{
     width: 380px;
     background-color: rgba(0, 0, 255, 0.596);
     border-radius: 10px 10px 0px 0px;
-    color: white;
     text-align: right;
+}
+
+.visor-text{
+    display: block;
     font-family: var(--calculdora);
     font-size: 2em;
+    color: yellow;
+}
+
+.antecessor{
+    display: block;
+    color:  white;
+    transform: translateY(-130px);
 }
 
 .tecla{
