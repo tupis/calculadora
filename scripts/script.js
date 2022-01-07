@@ -89,8 +89,8 @@ function operation(op) {
 function result() {
     switch (operador) {
         case "sum":
-            (a = Number(termo1), b = Number(termo2)) => {return resultado = a + b}
-            console.log(resultado)
+            (a = Number(termo1), b = Number(termo2)) => resultado = a + b
+            
             break;
         case "subs":
             (a = Number(termo1), b = Number(termo2)) => {
@@ -98,7 +98,7 @@ function result() {
             }
         break;
     }
-
+    
 
     /* function multiply(a = Number(termo1), b = Number(termo2)) {
         resultado = a * b;
