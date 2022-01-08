@@ -12,7 +12,7 @@ const visor = document.querySelector(".visor-text")
 const antecessor = document.querySelector(".antecessor")
 
 function adicionar(value) {
-    antecessor.style.transform = "translateY(-130px)"
+    antecessor.style.transform = "translateY(-150px)"
     switch (value) {
         case 0:
             termo.push(0)
@@ -66,85 +66,105 @@ function operation(op) {
         case 0:            //sum
             termo = elem_2
             operador = "sum"
+            visor.innerHTML = ""
+            antecessor.style.transform = "translateY(-92px)"
             antecessor.innerHTML = `${elemento.replace(".",",")}`
             break;
         case 1:            //subs
             termo = elem_2
             operador = "subs"
+            visor.innerHTML = ""
+            antecessor.style.transform = "translateY(-92px)"
             antecessor.innerHTML = `${elemento.replace(".",",")}`
             break;
         case 2:            //mult
             termo = elem_2
             operador = "mult"
+            visor.innerHTML = ""
+            antecessor.style.transform = "translateY(-92px)"
             antecessor.innerHTML = `${elemento.replace(".",",")}`
             break;
         case 3:            //divider
             termo = elem_2
             operador = "divider"
+            visor.innerHTML = ""
+            antecessor.style.transform = "translateY(-92px)"
             antecessor.innerHTML = `${elemento.replace(".",",")}`
             break;
         case 4:            //pow
             termo = elem_2
             operador = "pow"
+            visor.innerHTML = ""
+            antecessor.style.transform = "translateY(-92px)"
             antecessor.innerHTML = `${elemento.replace(".",",")}`
             break;
         case 5:            //sqrt
             termo = elem_2
             operador = "sqrt"
+            visor.innerHTML = ""
+            antecessor.style.transform = "translateY(-92px)"
             antecessor.innerHTML = `${elemento.replace(".",",")}`
         break;
     }
 }
 
 function result() {
-
+    antecessor.style.transform = "translateY(-150px)"
     switch (operador){
         case "sum":
             sum()
+            a = resultado
+            antecessor.innerHTML = `${a - b}`
             break;
        case "subs":
             subs()
+            a = resultado
+            antecessor.innerHTML = `${a + b}`
             break;
         case "mult":
             multiply()
+            a = resultado
+            antecessor.innerHTML = `${a / b}`
             break;
         case "divider":
             divider()
+            a = resultado
+            antecessor.innerHTML = `${a * b}`
             break;
         case "pow":
             pow()
+            a = resultado
+            antecessor.innerHTML = `${Math.sqrt(a)}`
             break;
         case "sqrt":
             sqrt()
+            a = resultado
+            antecessor.innerHTML = `${Math.pow(a,2)}`
         break;
     }
+
     function sum() {
         resultado = a + b;
     }
-
     function subs() {
         resultado = a - b;
     }
-
     function multiply() {
         resultado = a * b;
     }
-    
     function divider() {
         resultado = a / b;
     }
-    
     function sqrt() {
         resultado = Math.sqrt(a);
     }
-    
     function pow() {
         resultado = Math.pow(a,2);
     }
+
     visor.innerHTML = ""
     visor.innerHTML = `${resultado.toString().replace(".",",")}`
-    a = resultado
-    antecessor.innerHTML = `${a - b}`
+    
 }
 
 function clean() {

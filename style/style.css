@@ -11,17 +11,22 @@ body{
     top: 0;
     left: 0;
     margin: 0;
-    background-color: rgba(0, 0, 0, 0.808);
+    background-image: url("../images/background.jpg");
+    background-size: 100%, 100%;
+    
 }
 
 .corpo{
     height: 600px;
     width: 400px;
-    background-color: #ff000042;
-    margin: 50px auto 10px auto;
+    margin: 7% auto 10px auto;
     padding-top: 10px;
     padding-bottom: 25px;
     border-radius: 10px;
+
+    background-color: rgba(25, 2, 47, 0.089);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
 }
 
 .visor{
@@ -29,22 +34,30 @@ body{
     padding-top: 100px;
     height: 30px;
     width: 380px;
-    background-color: rgba(0, 0, 255, 0.596);
     border-radius: 10px 10px 0px 0px;
     text-align: right;
+
+    background-color: rgba(25, 2, 47, 0.055);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
 }
 
 .visor-text{
     display: block;
     font-family: var(--calculdora);
-    font-size: 2em;
-    color: yellow;
+    font-size: 3em;
+    color: white;
+
+    transform: translate(-7px,-25px);
 }
 
 .antecessor{
     display: block;
+    font-family: var(--calculdora);
     color:  white;
     transform: translateY(-130px);
+    font-size: 1.2em;
+    margin-right: 7px;
 }
 
 .tecla{
@@ -60,12 +73,15 @@ body{
 
     display: inline-flex;
     margin: 3px 1px;
-    background-color: green;
     height: 90px;
     width: 90px;
     align-items: center;
     justify-content: center;
     border-width: 0px;
+
+    background-color: rgba(25, 2, 47, 0.055);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
 
     cursor: pointer;
     
@@ -73,7 +89,7 @@ body{
 }
 
 .teclas:hover{
-    background-color: hotpink;
+    background-color: rgba(25, 2, 47, 0.37);
     filter: drop-shadow(2px 7px 10px rgba(0, 0, 0, 0.658));
     filter: drop-shadow(-2px 0px 10px rgba(0, 0, 0, 0.658));
 }
