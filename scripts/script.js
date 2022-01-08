@@ -119,11 +119,11 @@ function result() {
         break;
     }
     function sum() {
-        resultado = a + b
+        resultado = a + b;
     }
 
     function subs() {
-        resultado = a - b
+        resultado = a - b;
     }
 
     function multiply() {
@@ -139,10 +139,12 @@ function result() {
     }
     
     function pow() {
-        resultado = Math.pow(a,2)
+        resultado = Math.pow(a,2);
     }
     visor.innerHTML = ""
     visor.innerHTML = `${resultado.toString().replace(".",",")}`
+    a = resultado
+    antecessor.innerHTML = `${a - b}`
 }
 
 function clean() {
