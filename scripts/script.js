@@ -68,35 +68,35 @@ function operation(op) {
             operador = "sum"
             visor.innerHTML = ""
             antecessor.style.transform = "translateY(-92px)"
-            antecessor.innerHTML = `${elemento.replace(".",",")}`
+            antecessor.innerHTML = `${elemento.replace(".",",")} +`
             break;
         case 1:            //subs
             termo = elem_2
             operador = "subs"
             visor.innerHTML = ""
             antecessor.style.transform = "translateY(-92px)"
-            antecessor.innerHTML = `${elemento.replace(".",",")}`
+            antecessor.innerHTML = `${elemento.replace(".",",")} -`
             break;
         case 2:            //mult
             termo = elem_2
             operador = "mult"
             visor.innerHTML = ""
             antecessor.style.transform = "translateY(-92px)"
-            antecessor.innerHTML = `${elemento.replace(".",",")}`
+            antecessor.innerHTML = `${elemento.replace(".",",")} x`
             break;
         case 3:            //divider
             termo = elem_2
             operador = "divider"
             visor.innerHTML = ""
             antecessor.style.transform = "translateY(-92px)"
-            antecessor.innerHTML = `${elemento.replace(".",",")}`
+            antecessor.innerHTML = `${elemento.replace(".",",")} /`
             break;
         case 4:            //pow
             termo = elem_2
             operador = "pow"
             visor.innerHTML = ""
             antecessor.style.transform = "translateY(-92px)"
-            antecessor.innerHTML = `${elemento.replace(".",",")}`
+            antecessor.innerHTML = `${elemento.replace(".",",")} `
             break;
         case 5:            //sqrt
             termo = elem_2
