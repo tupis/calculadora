@@ -1,12 +1,13 @@
 // fazer interação do teclado com calculadora
 
-var elem_1 = []
-var elem_2 = []
-var termo = elem_1
-var resultado
-var operador
-var a
-var b
+let elem_1 = []
+let elem_2 = []
+let termo = elem_1
+let resultado
+let operador
+let a
+let b
+console.log(elem_1)
 
 const visor = document.querySelector(".visor-text")
 const antecessor = document.querySelector(".antecessor")
@@ -54,10 +55,6 @@ function adicionar(value) {
     const t2 = String(elem_2).split(",").join(" ").replace(/ /g ,"")
     a = Number(t1)
     b = Number(t2)
-
-    console.log(elem_1)
-    console.log(b)
-
 }
 
 function operation(op) { 
