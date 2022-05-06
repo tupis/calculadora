@@ -49,7 +49,7 @@ function adicionar(value) {
             termo.push(".")  
         break;
     }
-    const elemento = String(termo).split(",").join(" ").replace(/ /g ,"")
+    const elemento = String(termo).split(",").join(" ").replace(/ /g,"")
     visor.innerHTML = `${elemento.replace(".",",")}`
     const t1 = String(elem_1).split(",").join(" ").replace(/ /g,"")
     const t2 = String(elem_2).split(",").join(" ").replace(/ /g ,"")
